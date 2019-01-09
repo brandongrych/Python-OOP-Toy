@@ -10,7 +10,7 @@ SCREEN_SIZE = [640, 480]
 BACKGROUND_COLOR = [255, 255, 255]
 
 def debug_create_balls(object_list):
-    ball = Ball(SCREEN_SIZE, Vector2(50, 50), Vector2(3, 3), [255, 0, 0], 10)
+    ball = RainbowBall(SCREEN_SIZE, Vector2(50, 50), Vector2(3, 3), [255, 0, 0], 10)
     object_list.append(ball)
 
     # TODO: Create other ball types for testing
@@ -45,10 +45,11 @@ def main():
         for ball in object_list:
             ball.update()
  
-        # Draw Loop
+        # Draw items to buffer
         screen.fill(BACKGROUND_COLOR)
-        for ball in object_list:
-            ball.draw(screen, pygame)
+        for obj in object_list:
+            obj.draw(screen, pygame)
+            # Show buffer at x fps
  
         clock.tick(60)
         pygame.display.flip()
