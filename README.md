@@ -63,7 +63,9 @@ Implement simple physics to enable balls to bounce off of one another, or off of
 * If you're getting errors about `InvalidMarker`:
   * Don't use `pipenv` for this project. No `install`, no `shell`.
   * Run `pip3 install pygame`
-  * Once it's installed, run the game from the `src/` directory with
+  * Once it's installed, run the game from the `src/` directory 
+  
+  with
     ```
     python3 draw.py
     ```
